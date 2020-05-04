@@ -145,34 +145,120 @@ Mark likes to tip 20% of the bill when the bill is less than $100, 10% when the 
 8. Log to the console which family paid the highest tips on average
 
  */
+/*
 
 var johnfamily = {
-    bills: [124, 48, 268, 180, 42],
+    szamlak: [124, 48, 268, 180, 42],
+    fullname: 'John Család',
 
-    tipCalculator: function () {
-        this.tips = [];
-        this.finalValues = [];
-        for (let i = 0; i < this.bills.length; i++) {
-            //Ebbe a változóba, kerül hogy hány százalék a plusz.
-            var percent;
-            // a bills tömb aktuális (bill) tagja.
-            var bill = this.bills[i];
-            if (bill < 50) {
-                percent = 0.2;
-            } else if (bill > 50 && bill < 200) {
-                percent = 0.15;
-            } else if (bill > 200) {
-                percent = 0.1;
+    calcBorravalo: function() {
+        // A "this" itt az objektum „tulajdonosára” vagyis a johnfamily-re utal: ez a johhnfamily borravalója.
+        this.borravalok = [];
+        this.vegosszeg = [];
+        // a szamlak tömb végének megadásához használni kell a this kulcsszót., anélkül nem ismeri fel a metóduson kívül megadott szamlak tömböt
+        for (let i = 0; i < this.szamlak.length; i++) {
+            //Ebbe a változóba kerül hogy hány százalék a plusz.
+            var szamologep;
+            // a szamlak tömb aktuális szamla tagja.
+            var szamla = this.szamlak[i];
+            if (szamla < 50) {
+                szamologep = 0.2;
+            } else if (szamla > 50 && szamla < 200) {
+                szamologep = 0.15;
+            } else if (szamla > 200) {
+                szamologep = 0.1;
             }
 
             // Az aktuális eredményeket a fent létrehozott
             // 1-1 üres tömbbe teszi bele. A tömb elemeinek
             // száma attól függ, hogy hány számla van.
-            this.tips[i] = bill[i] + percent;
-            this.finalValues[i] = bill[i] + this.tips[i];
-
+            this.borravalok[i] = szamla * szamologep;
+            this.vegosszeg[i] = szamla + szamla * szamologep;
         }
-    },
+    }
 }
-johnfamily.tipCalculator();
-console.log(johnfamily);
+
+var markfamily = {
+    szamlak: [77, 375, 110, 45],
+    fullname: 'Mark Család',
+
+// A tipp kalkulátor nem ad vissza semmit, mint egy függvény.
+// Ez egy metódus, ami kiszámolja a megfelelő értékeket.
+    calcBorravalo: function() {
+        this.borravalok = [];
+        this.vegosszeg = [];
+        for (let i = 0; i < this.szamlak.length; i++) {
+            //Ebbe a változóba kerül hogy hány százalék a plusz.
+            var szamologep;
+            // a szamlak tömb aktuális (szamla) tagja.
+            var szamla = this.szamlak[i];
+            if (szamla < 100) {
+                szamologep = 0.2;
+            } else if (szamla > 100 && szamla < 300) {
+                szamologep = 0.1;
+            } else if (szamla > 300) {
+                szamologep = 0.25;
+            }
+
+            // Az aktuális eredményeket a fent létrehozott
+            // 1-1 üres tömbbe teszi bele. A tömb elemeinek
+            // száma attól függ, hogy hány számla van.
+            this.borravalok[i] = szamla * szamologep;
+            this.vegosszeg[i] = szamla + szamla * szamologep;
+        }
+    }
+}
+
+function calcAtlag(tips) {
+    var sum = 0;
+    // összeadja a borravalok tömb egyes borravaló elemeinek értékét
+    for (let i = 0; i < tips.length; i++) {
+        sum = sum + tips[i];
+
+    }
+    return sum/tips.length;
+}
+
+johnfamily.calcBorravalo();
+markfamily.calcBorravalo();
+
+// itt létrejön egy új változó a johnfamily objektumra
+johnfamily.atlag = calcAtlag(johnfamily.borravalok);
+markfamily.atlag = calcAtlag(markfamily.borravalok);
+
+console.log(johnfamily.atlag);
+console.log(markfamily.atlag);
+
+if (johnfamily.atlag>markfamily.atlag){
+    console.log(johnfamily.fullname+"borravalóinak átlaga magasabb = " + johnfamily.atlag);
+} else {
+    console.log(markfamily.fullname+"borravalóinak átlaga magasabb = "+ markfamily.atlag);
+}
+*/
+
+var jani = {
+    teljesNev: "Jani családja",
+    szamlak: [124, 48, 268, 180, 42],
+
+    borravaloSzamolo: function () {
+        var szazalek;
+        var szamla = this.szamlak[i];
+        this.borravalok = [];
+        this.teljesOsszegek = [];
+        for (let i = 0; i < szamla.length; i++) {
+            if (szamla < 50){
+                szazalek = 0.2
+            } else if(szamla > 50 && this.szamlak[i < 200]){
+                szazalek = 0.15
+            }
+            else{
+                szazalek = 0.1
+            }
+            this.borravalok[i] = szamla * szazalek;
+            this.teljesOsszegek[i] = szamla + szamla * szazalek;
+        }
+
+    }
+}
+
+console.log(jani);
