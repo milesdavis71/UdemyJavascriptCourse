@@ -480,7 +480,6 @@ console.log(tips, finalValues);
 /*****************************
 * Objects and properties
 */
-/*
 // Object literal
 var john = {
     firstName: 'John',
@@ -506,14 +505,13 @@ jane.firstName = 'Jane';
 jane.birthYear = 1969;
 jane['lastName'] = 'Smith';
 console.log(jane);
-*/
 
 
 
 /*****************************
 * Objects and methods
 */
-/*
+
 var john = {
     firstName: 'John',
     lastName: 'Smith',
@@ -528,7 +526,7 @@ var john = {
 
 john.calcAge();
 console.log(john);
-*/
+
 
 
 
