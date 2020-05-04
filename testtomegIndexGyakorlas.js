@@ -242,10 +242,10 @@ var jani = {
 
     borravaloSzamolo: function () {
         var szazalek;
-        var szamla = this.szamlak[i];
         this.borravalok = [];
         this.teljesOsszegek = [];
-        for (let i = 0; i < szamla.length; i++) {
+        for (let i = 0; i < this.szamlak.length; i++) {
+            var szamla = this.szamlak[i];
             if (szamla < 50){
                 szazalek = 0.2
             } else if(szamla > 50 && this.szamlak[i < 200]){
@@ -261,4 +261,44 @@ var jani = {
     }
 }
 
-console.log(jani);
+
+var mark = {
+    teljesNev: "Márk családja",
+    szamlak: [77, 375, 110, 45],
+
+    borravaloSzamolo: function () {
+        var szazalek;
+        this.borravalok = [];
+        this.teljesOsszegek = [];
+        for (let i = 0; i < this.szamlak.length; i++) {
+            var szamla = this.szamlak[i];
+            if (szamla < 100){
+                szazalek = 0.2
+            } else if(szamla > 100 && this.szamlak[i < 300]){
+                szazalek = 0.2
+            }
+            else{
+                szazalek = 0.25
+            }
+            this.borravalok[i] = szamla * szazalek;
+            this.teljesOsszegek[i] = szamla + szamla * szazalek;
+        }
+
+    }
+}
+
+function atlagSzamolo(borravalok) {
+    for (let i = 0; i < borravalok.length; i++) {
+        var sum = 0;
+        sum = borravalok[i] + sum;
+    }
+    return sum/borravalok.length;
+}
+
+jani.borravaloSzamolo();
+mark.borravaloSzamolo();
+
+jani.atlag = jani.borravaloSzamolo();
+mark.atlag = mark.borravaloSzamolo();
+
+
