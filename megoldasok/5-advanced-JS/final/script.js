@@ -104,6 +104,8 @@ console.log(obj.city);
 /*
 var years = [1990, 1965, 1937, 2005, 1998];
 
+// A függvény feltölti a fent megadott tömb elemeit egy olyan új tömbbe (arrRes)), amit ÁTAD egy olyan függvénynek,
+// ami valamit kiszámol. Az fn-be először belekerül a calculateAge, aztán a maxHeartRate (callback függvények)).
 function arrayCalc(arr, fn) {
     var arrRes = [];
     for (var i = 0; i < arr.length; i++) {
@@ -116,10 +118,6 @@ function calculateAge(el) {
     return 2016 - el;
 }
 
-function isFullAge(el) {
-    return el >= 18;
-}
-
 function maxHeartRate(el) {
     if (el >= 18 && el <= 81) {
         return Math.round(206.9 - (0.67 * el));
@@ -128,20 +126,20 @@ function maxHeartRate(el) {
     }
 }
 
-
+// ages –> Ez hívja meg a calculate age függvényt úgy, hogy a years tömböt adja át argumentumként, majd visszakapja
+// egy tömbben a kiszámolt értékeket.
 var ages = arrayCalc(years, calculateAge);
-var fullAges = arrayCalc(ages, isFullAge);
+
+// rates –> az ages tömb kerül bele a számológépbe, ami most a maximális szívverés értéket adja vissza.
 var rates = arrayCalc(ages, maxHeartRate);
 
 console.log(ages);
-console.log(rates);
-*/
+console.log(rates);*/
 
 
 
 /////////////////////////////
 // Lecture: Functions returning functions
-/*
 function interviewQuestion(job) {
     if (job === 'designer') {
         return function(name) {
@@ -169,7 +167,6 @@ designerQuestion('Mark');
 designerQuestion('Mike');
 
 interviewQuestion('teacher')('Mark');
-*/
 
 
 
@@ -240,7 +237,6 @@ interviewQuestion('teacher')('John');
 
 /////////////////////////////
 // Lecture: Bind, call and apply
-/*
 var john = {
     name: 'John',
     age: 26,
@@ -278,6 +274,12 @@ emilyFormal('afternoon');
 // Another cool example
 var years = [1990, 1965, 1937, 2005, 1998];
 
+// Ez a program az életkort számolja a születési évszám alapján.
+// Nyugdíj kiszámításnál azonban van egy alsó határ, ami alatt nem számolnak nyugdíjat, te
+// nyugdíjba, akkor egy bizonyos limitet meg kellen határozni, hogy
+// bemegy a years tömb és lexikográfiai sorrendben a függvények alul.
+// itt arról van szó, hogy legyen egy alsó életkor határ (limit) a nyugdíjas életkor kiszámolásának, és ha egy kiszámolt életkor
+// a limit alatt van, arra
 function arrayCalc(arr, fn) {
     var arrRes = [];
     for (var i = 0; i < arr.length; i++) {
@@ -298,7 +300,6 @@ var ages = arrayCalc(years, calculateAge);
 var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
 console.log(ages);
 console.log(fullJapan);
-*/
 
 
 
