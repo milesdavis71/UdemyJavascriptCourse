@@ -140,6 +140,7 @@ console.log(rates);*/
 
 /////////////////////////////
 // Lecture: Functions returning functions
+/*
 function interviewQuestion(job) {
     if (job === 'designer') {
         return function(name) {
@@ -167,6 +168,7 @@ designerQuestion('Mark');
 designerQuestion('Mike');
 
 interviewQuestion('teacher')('Mark');
+*/
 
 
 
@@ -237,7 +239,7 @@ interviewQuestion('teacher')('John');
 
 /////////////////////////////
 // Lecture: Bind, call and apply
-var john = {
+/* var john = {
     name: 'John',
     age: 26,
     job: 'teacher',
@@ -300,7 +302,7 @@ var ages = arrayCalc(years, calculateAge);
 var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
 console.log(ages);
 console.log(fullJapan);
-
+ */
 
 
 
@@ -330,15 +332,18 @@ c) correct answer (I would use a number for this)
 */
 
 
-/*
+// Azonnal meghívott függvény
 (function() {
+    // Függvény deklaráció 3 paraméterrel.
     function Question(question, answers, correct) {
         this.question = question;
         this.answers = answers;
         this.correct = correct;
     }
 
+    // Öröklés -> A displayQuestion függvény elérhető lesz a Question függvényből. 
     Question.prototype.displayQuestion = function() {
+        // Kiírja a kérdést.
         console.log(this.question);
 
         for (var i = 0; i < this.answers.length; i++) {
@@ -363,10 +368,12 @@ c) correct answer (I would use a number for this)
                           ['John', 'Micheal', 'Jonas'],
                           2);
 
-    var q3 = new Question('What does best describe coding?',
+    var q3 =    new Question('What does best describe coding?',
                           ['Boring', 'Hard', 'Fun', 'Tediuos'],
                           2);
 
+    
+    // A 3 kérdés egy tömbben
     var questions = [q1, q2, q3];
 
     var n = Math.floor(Math.random() * questions.length);
@@ -377,7 +384,7 @@ c) correct answer (I would use a number for this)
 
     questions[n].checkAnswer(answer);
 })();
-*/
+
 
 
 
