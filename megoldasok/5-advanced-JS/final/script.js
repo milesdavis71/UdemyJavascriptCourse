@@ -140,7 +140,7 @@ console.log(rates);*/
 
 /////////////////////////////
 // Lecture: Functions returning functions
-function interviewQuestion(job) {
+/* function interviewQuestion(job) {
     if (job === 'designer') {
         return function(name) {
             console.log(name + ', can you please explain what UX design is?');
@@ -169,7 +169,7 @@ designerQuestion('Mike');
 interviewQuestion('teacher')('Mark');
 
 
-
+ */
 /////////////////////////////
 // Lecture: IIFE
 /*
@@ -237,7 +237,7 @@ interviewQuestion('teacher')('John');
 
 /////////////////////////////
 // Lecture: Bind, call and apply
-var john = {
+/* var john = {
     name: 'John',
     age: 26,
     job: 'teacher',
@@ -302,7 +302,7 @@ console.log(ages);
 console.log(fullJapan);
 
 
-
+ */
 
 /////////////////////////////
 // CODING CHALLENGE
@@ -330,15 +330,21 @@ c) correct answer (I would use a number for this)
 */
 
 
-/*
+// Azonnal meghívott függvénykifejezés
 (function() {
     function Question(question, answers, correct) {
+        // 
         this.question = question;
         this.answers = answers;
         this.correct = correct;
     }
 
+    // 4.
+    // Question.prototype.displayQuestion –> A displayQuestion függvény elérhető lesz a Question függvényen keresztül.
+    
     Question.prototype.displayQuestion = function() {
+            // Egy for ciklussal kiírja a konzolra a kisorsolt kvízkérdést.
+
         console.log(this.question);
 
         for (var i = 0; i < this.answers.length; i++) {
@@ -355,6 +361,10 @@ c) correct answer (I would use a number for this)
         }
     }
 
+    // 1.
+    // A kérdések példányosítása a Question függvénnyel.
+    // 3 objektum létrehozása, a new szerepének nézz utána!
+
     var q1 = new Question('Is JavaScript the coolest programming language in the world?',
                           ['Yes', 'No'],
                           0);
@@ -367,17 +377,26 @@ c) correct answer (I would use a number for this)
                           ['Boring', 'Hard', 'Fun', 'Tediuos'],
                           2);
 
+    
+    // 2.
+    // A három kvizfeladat mindenestől belekerül a questions tömbbe. 
+
     var questions = [q1, q2, q3];
 
+    // 3.
+    // Sorsol egy számot az alapján, hogy hány kérdés van a kérdések változóban.
     var n = Math.floor(Math.random() * questions.length);
 
+    // 4.
     questions[n].displayQuestion();
 
+    // Promptba kiírja, hogy válaszolj.
     var answer = parseInt(prompt('Please select the correct answer.'));
 
+    // 5. Megnézi, jó-e a válasz.
     questions[n].checkAnswer(answer);
 })();
-*/
+
 
 
 
