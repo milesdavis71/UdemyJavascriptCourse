@@ -167,9 +167,10 @@ designerQuestion('Mark');
 designerQuestion('Mike');
 
 interviewQuestion('teacher')('Mark');
+*/
 
 
- */
+
 /////////////////////////////
 // Lecture: IIFE
 /*
@@ -300,9 +301,9 @@ var ages = arrayCalc(years, calculateAge);
 var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
 console.log(ages);
 console.log(fullJapan);
-
-
  */
+
+
 
 /////////////////////////////
 // CODING CHALLENGE
@@ -332,6 +333,7 @@ c) correct answer (I would use a number for this)
 
 // Azonnal meghívott függvénykifejezés
 (function() {
+    // Függvény deklaráció 3 paraméterrel.
     function Question(question, answers, correct) {
         // 
         this.question = question;
@@ -373,7 +375,7 @@ c) correct answer (I would use a number for this)
                           ['John', 'Micheal', 'Jonas'],
                           2);
 
-    var q3 = new Question('What does best describe coding?',
+    var q3 =    new Question('What does best describe coding?',
                           ['Boring', 'Hard', 'Fun', 'Tediuos'],
                           2);
 
