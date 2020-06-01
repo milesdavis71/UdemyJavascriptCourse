@@ -333,7 +333,9 @@ c) correct answer (I would use a number for this)
 
 // Azonnal meghívott függvénykifejezés
 (function() {
-    // Függvény deklaráció 3 paraméterrel.
+
+    // Az ugyanolyan típusú objektumokat new kulcsszóval kell létrehozni,
+    // ezeket a question függvény fogja meghívni.
     function Question(question, answers, correct) {
         // 
         this.question = question;
@@ -364,8 +366,8 @@ c) correct answer (I would use a number for this)
     }
 
     // 1.
-    // A kérdések példányosítása a Question függvénnyel.
-    // 3 objektum létrehozása, a new szerepének nézz utána!
+    // Az ugyanolyan típusú objektumokat new kulcsszóval kell létrehozni,
+    // ezeket a question függvény fogja meghívni.
 
     var q1 = new Question('Is JavaScript the coolest programming language in the world?',
                           ['Yes', 'No'],
@@ -381,7 +383,7 @@ c) correct answer (I would use a number for this)
 
     
     // 2.
-    // A három kvizfeladat mindenestől belekerül a questions tömbbe. 
+    //A három kvizfeladat mindenestől belekerül a questions tömbbe. 
 
     var questions = [q1, q2, q3];
 
