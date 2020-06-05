@@ -51,10 +51,10 @@ GOOD LUCK 😀
 
 
 */
-
+/*
 var Person = function(name, score) {
  this.name = name;
- this.score = score;   
+ this.score = score;
 }
 
 Person.prototype.calcAvgScore = function () {
@@ -66,20 +66,25 @@ Person.prototype.calcAvgScore = function () {
    return avgScore;
 }
 
+function calcAvgMax(players) {
+  maxAvgScore = Math.max()
+}
+
 var mark = new Person('Mark', [89, 75, 63]);
-var john = new Person('Mike', [110, 85, 75]);
+    john = new Person('Mike', [110, 85, 75]);
+    mary = new Person('Mary', [97, 134, 105]);
 
 
-
-
-let message = (mark.calcAvgScore() > john.calcAvgScore()) ? 'Markék átlaga nagyobb' :
-  (mark.calcAvgScore() < john.calcAvgScore()) ? 'Johnék átlaga nagyobb!' :
-  (mark.calcAvgScore() === john.calcAvgScore()) ? 'egyenlő!' :
-  'What an unusual age!';
+// Ternáris operátor 3 vizsgálatra. Az utolsó végén, ha egyik se igaz, akkor is továbbmegy.
+let message = (mark.calcAvgScore() > john.calcAvgScore() && mark.calcAvgScore() > mary.calcAvgScore()) ? 'Markék átlaga nagyobb' :
+  (john.calcAvgScore() > mark.calcAvgScore() && john.calcAvgScore() > mary.calcAvgScore()) ? 'Johnék átlaga nagyobb!' :
+  (mary.calcAvgScore() > mark.calcAvgScore() && mary.calcAvgScore() > john.calcAvgScore()) ? 'Mary-ék átlaga nagyobb!' :
+  (mark.calcAvgScore() === john.calcAvgScore() === mary.calcAvgScore()) ? 'egyenlő!' :
+  'Hiba!';
 
 console.log(message)
 
-
+*/
 
 
 
@@ -99,6 +104,41 @@ In the end, John would like to have 2 arrays:
 (NOTE: To calculate 20% of a value, simply multiply it with 20/100 = 0.2)
 
 GOOD LUCK 😀
+
+*/
+var bills = [124, 48, 268];
+
+var arrayCalc = function(arr, fn){
+  var arrLoad = [];
+  for (let i = 0; i < arr.length; i++) {
+    arrLoad.push(fn(arr[i]));
+  }
+  return arrLoad;
+}
+
+function calcSumOfBill(el){
+  var tipVal = (el < 50) ? el+ el*.2 :
+            (el > 50 && el < 200) ? el+ el*.15 :
+            (el > 200) ? el+ el*.1 :
+            console.log("Hiba");
+            return tipVal;
+}
+
+function calcTip(el){
+  var tipValue = (el < 50) ? el * .2 :
+            (el > 50 && el < 200) ? el * .15 :
+            (el > 200) ? el * .1 :
+            console.log("Hiba");
+            return tipValue;
+  };
+
+
+var sumSum = arrayCalc(bills, calcTip);
+var sumSumSum = arrayCalc(bills, calcSumOfBill);
+
+console.log(sumSum);
+console.log(sumSumSum);
+
 
 
 /*****************************
