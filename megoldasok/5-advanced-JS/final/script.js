@@ -104,6 +104,8 @@ console.log(obj.city);
 /*
 var years = [1990, 1965, 1937, 2005, 1998];
 
+// A függvény feltölti a fent megadott tömb elemeit egy olyan új tömbbe (arrRes)), amit ÁTAD egy olyan függvénynek,
+// ami valamit kiszámol. Az fn-be először belekerül a calculateAge, aztán a maxHeartRate (callback függvények)).
 function arrayCalc(arr, fn) {
     var arrRes = [];
     for (var i = 0; i < arr.length; i++) {
@@ -116,10 +118,6 @@ function calculateAge(el) {
     return 2016 - el;
 }
 
-function isFullAge(el) {
-    return el >= 18;
-}
-
 function maxHeartRate(el) {
     if (el >= 18 && el <= 81) {
         return Math.round(206.9 - (0.67 * el));
@@ -128,21 +126,21 @@ function maxHeartRate(el) {
     }
 }
 
-
+// ages –> Ez hívja meg a calculate age függvényt úgy, hogy a years tömböt adja át argumentumként, majd visszakapja
+// egy tömbben a kiszámolt értékeket.
 var ages = arrayCalc(years, calculateAge);
-var fullAges = arrayCalc(ages, isFullAge);
+
+// rates –> az ages tömb kerül bele a számológépbe, ami most a maximális szívverés értéket adja vissza.
 var rates = arrayCalc(ages, maxHeartRate);
 
 console.log(ages);
-console.log(rates);
-*/
+console.log(rates);*/
 
 
 
 /////////////////////////////
 // Lecture: Functions returning functions
-/*
-function interviewQuestion(job) {
+/* function interviewQuestion(job) {
     if (job === 'designer') {
         return function(name) {
             console.log(name + ', can you please explain what UX design is?');
@@ -240,8 +238,7 @@ interviewQuestion('teacher')('John');
 
 /////////////////////////////
 // Lecture: Bind, call and apply
-/*
-var john = {
+/* var john = {
     name: 'John',
     age: 26,
     job: 'teacher',
@@ -278,6 +275,12 @@ emilyFormal('afternoon');
 // Another cool example
 var years = [1990, 1965, 1937, 2005, 1998];
 
+// Ez a program az életkort számolja a születési évszám alapján.
+// Nyugdíj kiszámításnál azonban van egy alsó határ, ami alatt nem számolnak nyugdíjat, te
+// nyugdíjba, akkor egy bizonyos limitet meg kellen határozni, hogy
+// bemegy a years tömb és lexikográfiai sorrendben a függvények alul.
+// itt arról van szó, hogy legyen egy alsó életkor határ (limit) a nyugdíjas életkor kiszámolásának, és ha egy kiszámolt életkor
+// a limit alatt van, arra
 function arrayCalc(arr, fn) {
     var arrRes = [];
     for (var i = 0; i < arr.length; i++) {
@@ -298,8 +301,7 @@ var ages = arrayCalc(years, calculateAge);
 var fullJapan = arrayCalc(ages, isFullAge.bind(this, 20));
 console.log(ages);
 console.log(fullJapan);
-*/
-
+ */
 
 
 
@@ -330,14 +332,24 @@ c) correct answer (I would use a number for this)
 
 
 
+// Azonnal meghívott függvénykifejezés
 (function() {
+
+    // Az ugyanolyan típusú objektumokat new kulcsszóval kell létrehozni,
+    // ezeket a question függvény fogja meghívni.
     function Question(question, answers, correct) {
+        // 
         this.question = question;
         this.answers = answers;
         this.correct = correct;
     }
 
+    // 4.
+    // Question.prototype.displayQuestion –> A displayQuestion függvény elérhető lesz a Question függvényen keresztül.
+    
     Question.prototype.displayQuestion = function() {
+            // Egy for ciklussal kiírja a konzolra a kisorsolt kvízkérdést.
+
         console.log(this.question);
 
         for (var i = 0; i < this.answers.length; i++) {
@@ -354,6 +366,10 @@ c) correct answer (I would use a number for this)
         }
     }
 
+    // 1.
+    // Az ugyanolyan típusú objektumokat new kulcsszóval kell létrehozni,
+    // ezeket a question függvény fogja meghívni.
+
     var q1 = new Question('Is JavaScript the coolest programming language in the world?',
                           ['Yes', 'No'],
                           0);
@@ -362,18 +378,27 @@ c) correct answer (I would use a number for this)
                           ['John', 'Micheal', 'Jonas'],
                           2);
 
-    var q3 = new Question('What does best describe coding?',
+    var q3 =    new Question('What does best describe coding?',
                           ['Boring', 'Hard', 'Fun', 'Tediuos'],
                           2);
 
+    
+    // 2.
+    //A három kvizfeladat mindenestől belekerül a questions tömbbe. 
+
     var questions = [q1, q2, q3];
 
+    // 3.
+    // Sorsol egy számot az alapján, hogy hány kérdés van a kérdések változóban.
     var n = Math.floor(Math.random() * questions.length);
 
+    // 4.
     questions[n].displayQuestion();
 
+    // Promptba kiírja, hogy válaszolj.
     var answer = parseInt(prompt('Please select the correct answer.'));
 
+    // 5. Megnézi, jó-e a válasz.
     questions[n].checkAnswer(answer);
 })();
 
