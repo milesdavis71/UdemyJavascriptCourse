@@ -25,10 +25,10 @@ GOOD LUCK 😀
 // var markBmi = calculateBMI(50, 100);
 // var johnBmi = calculateBMI(80, 130);
 // var markIsHigher = markBmi>johnBmi;
- 
+
 
 // console.log('Mark BMI-je magasabb '+markIsHigher);
-   
+
 
 
 
@@ -106,6 +106,7 @@ In the end, John would like to have 2 arrays:
 GOOD LUCK 😀
 
 */
+/*
 var bills = [124, 48, 268];
 
 var arrayCalc = function(arr, fn){
@@ -136,9 +137,8 @@ function calcTip(el){
 var sumSum = arrayCalc(bills, calcTip);
 var sumSumSum = arrayCalc(bills, calcSumOfBill);
 
-console.log(sumSum);
-console.log(sumSumSum);
-
+console.log(sumSum, sumSumSum);
+ */
 
 
 /*****************************
@@ -182,3 +182,89 @@ Mark likes to tip 20% of the bill when the bill is less than $100, 10% when the 
 
 GOOD LUCK 😀
 */
+
+function Guest(
+  name,
+  bills,
+  limit1,
+  limit2,
+  percent1,
+  percent2,
+  percent3) {
+  this.name = name;
+  this.bills = bills;
+  this.limit1 = limit1;
+  this.limit2 = limit2;
+  this.percent1 = percent1;
+  this.percent2 = percent2;
+  this.percent3 = percent3;
+
+}
+
+
+/* var arrayCalc = function(arr, fn){
+  var arrPop = [];
+  for (let i = 0; i < arr.length; i++) {
+    arrPop.push(fn(arr[i]));
+  }
+  return arrPop;
+} */
+
+
+
+Guest.prototype.calcTip = function (name, bills) {
+  console.log(bills);
+  var arrTip = [];
+  for (let i = 0; i < bills.length; i++) {
+    tip = (bills[i] < this.limit1) ? bills[i] * this.percent1 / 100 :
+      (bills[i] > this.limit1 && bills[i] < this.limit2) ? bills[i] * this.percent2 / 100 :
+        (bills[i] > this.limit3) ? bills[i] * this.percent3 / 100 :
+          console.log("Hiba");
+
+
+
+  }
+  console.log(tip);
+
+}
+
+
+
+
+
+var john = new Guest(
+  'John', [124, 48, 268, 180, 42]
+[77, 375, 110, 45],
+  50,
+  200,
+  20,
+  15,
+  10);
+
+var mark = new Guest(
+  'Mark',
+  [77, 375, 110, 45],
+  100,
+  300,
+  20,
+  10,
+  25);
+
+// var calcTipJohn = (john.bills);
+/* var tipJohn = arrayCalc(billsJohn, calcTipJohn);
+var tipMark = arrayCalc(billsMark, calcTipMark);
+var sumJohn = billsJohn.map(function (num, idx) {
+  return num + tipJohn[idx];
+});
+var sumMark = billsMark.map(function (num, idx) {
+  return num + tipMark[idx];
+});
+
+function calcAverage(params) {
+  
+} */
+
+Guest.prototype.calcTip(mark, mark.bills, mark.limit1, mark.limit2, mark.percent1, mark.percent2, mark.percent3);
+
+
+// console.log();
