@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="04a8e26d-85db-4d78-8291-bc3d903b291b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/megoldasok/5-advanced-JS/final/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/megoldasok/5-advanced-JS/final/script.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1c6sUdFmATHRd3hQZUAzu93I32W" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Foundation-6-Effects-of-Alcohol-master" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="5" type="JavascriptDebugType" uri="http://index.html">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" uri="http://index.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/UdemyJavascriptCourse/megoldasok/5-advanced-JS/final/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.5" />
+      <item itemvalue="JavaScript Debug.index.html" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04a8e26d-85db-4d78-8291-bc3d903b291b" name="Default" comment="" />
+      <created>1588395329035</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588395329035</updated>
+      <workItem from="1588395332349" duration="248000" />
+      <workItem from="1588396399384" duration="73000" />
+      <workItem from="1588569292845" duration="12000" />
+      <workItem from="1588571877041" duration="12311000" />
+      <workItem from="1588602737710" duration="50000" />
+      <workItem from="1588652046245" duration="4231000" />
+      <workItem from="1588833326509" duration="330000" />
+      <workItem from="1588837699532" duration="2464000" />
+      <workItem from="1588919073198" duration="290000" />
+      <workItem from="1588931458440" duration="1345000" />
+      <workItem from="1588998474591" duration="126000" />
+      <workItem from="1589001965101" duration="867000" />
+      <workItem from="1589016642573" duration="1576000" />
+      <workItem from="1589199459555" duration="736000" />
+      <workItem from="1589860396337" duration="4400000" />
+      <workItem from="1589952524090" duration="517000" />
+      <workItem from="1590265366466" duration="350000" />
+      <workItem from="1590405499592" duration="9000" />
+    </task>
+    <task id="LOCAL-00001" summary="Létrehozás">
+      <created>1588395410822</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588395410822</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Létrehozás">
+      <created>1588395437757</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588395437757</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Megoldások feltöltése">
+      <created>1588396436337</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588396436337</updated>
+    </task>
+    <task id="LOCAL-00004" summary="modules feltöltése">
+      <created>1588396460950</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588396460950</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Coding Challange 5 gyakorlása">
+      <created>1588580748242</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588580748242</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Coding Challange 5 gyakorlása 2">
+      <created>1588602766060</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588602766060</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Coding Challange 5 KÉSZ, 2x gyakorlás.">
+      <created>1588657148180</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588657148180</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Megoldások feltöltése">
+      <created>1588833385610</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588833385610</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
+    <MESSAGE value="Létrehozás" />
+    <MESSAGE value="modules feltöltése" />
+    <MESSAGE value="Coding Challange 5 gyakorlása" />
+    <MESSAGE value="Coding Challange 5 gyakorlása 2" />
+    <MESSAGE value="Coding Challange 5 KÉSZ, 2x gyakorlás." />
+    <MESSAGE value="Megoldások feltöltése" />
+    <option name="LAST_COMMIT_MESSAGE" value="Megoldások feltöltése" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="178" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590265553397">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state x="178" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.0.1853.1080@67.0.1853.1080" timestamp="1590265553397" />
+    <state x="921" y="278" key="FileChooserDialogImpl" timestamp="1589952548362">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state x="921" y="278" key="FileChooserDialogImpl/67.0.1853.1080@67.0.1853.1080" timestamp="1589952548361" />
+    <state width="1277" height="356" key="GridCell.Tab.0.bottom" timestamp="1590265718820">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.0.bottom/67.0.1853.1080@67.0.1853.1080" timestamp="1590265718820" />
+    <state width="1277" height="356" key="GridCell.Tab.0.center" timestamp="1590265718819">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.0.center/67.0.1853.1080@67.0.1853.1080" timestamp="1590265718819" />
+    <state width="1277" height="356" key="GridCell.Tab.0.left" timestamp="1590265718819">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.0.left/67.0.1853.1080@67.0.1853.1080" timestamp="1590265718819" />
+    <state width="1277" height="356" key="GridCell.Tab.0.right" timestamp="1590265718819">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.0.right/67.0.1853.1080@67.0.1853.1080" timestamp="1590265718819" />
+    <state width="1277" height="356" key="GridCell.Tab.1.bottom" timestamp="1590265718820">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.1.bottom/67.0.1853.1080@67.0.1853.1080" timestamp="1590265718820" />
+    <state width="1277" height="356" key="GridCell.Tab.1.center" timestamp="1590265718820">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.1.center/67.0.1853.1080@67.0.1853.1080" timestamp="1590265718820" />
+    <state width="1277" height="356" key="GridCell.Tab.1.left" timestamp="1590265718820">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.1.left/67.0.1853.1080@67.0.1853.1080" timestamp="1590265718820" />
+    <state width="1277" height="356" key="GridCell.Tab.1.right" timestamp="1590265718820">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.1.right/67.0.1853.1080@67.0.1853.1080" timestamp="1590265718820" />
+    <state width="1277" height="356" key="GridCell.Tab.2.bottom" timestamp="1590265718821">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.2.bottom/67.0.1853.1080@67.0.1853.1080" timestamp="1590265718821" />
+    <state width="1277" height="356" key="GridCell.Tab.2.center" timestamp="1590265718820">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.2.center/67.0.1853.1080@67.0.1853.1080" timestamp="1590265718820" />
+    <state width="1277" height="356" key="GridCell.Tab.2.left" timestamp="1590265718820">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.2.left/67.0.1853.1080@67.0.1853.1080" timestamp="1590265718820" />
+    <state width="1277" height="356" key="GridCell.Tab.2.right" timestamp="1590265718821">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.2.right/67.0.1853.1080@67.0.1853.1080" timestamp="1590265718821" />
+    <state width="1277" height="356" key="GridCell.Tab.3.bottom" timestamp="1590265523081">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.3.bottom/67.0.1853.1080@67.0.1853.1080" timestamp="1590265523081" />
+    <state width="1277" height="356" key="GridCell.Tab.3.center" timestamp="1590265523081">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.3.center/67.0.1853.1080@67.0.1853.1080" timestamp="1590265523081" />
+    <state width="1277" height="356" key="GridCell.Tab.3.left" timestamp="1590265523080">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.3.left/67.0.1853.1080@67.0.1853.1080" timestamp="1590265523080" />
+    <state width="1277" height="356" key="GridCell.Tab.3.right" timestamp="1590265523081">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state width="1277" height="356" key="GridCell.Tab.3.right/67.0.1853.1080@67.0.1853.1080" timestamp="1590265523081" />
+    <state x="923" y="230" key="search.everywhere.popup" timestamp="1589862472907">
+      <screen x="67" y="0" width="1853" height="1080" />
+    </state>
+    <state x="923" y="230" key="search.everywhere.popup/67.0.1853.1080@67.0.1853.1080" timestamp="1589862472907" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/megoldasok/5-advanced-JS/final/script.js</url>
+          <line>333</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

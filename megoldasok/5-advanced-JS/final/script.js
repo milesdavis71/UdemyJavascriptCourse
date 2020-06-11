@@ -175,27 +175,27 @@ interviewQuestion('teacher')('Mark');
 
 /////////////////////////////
 // Lecture: IIFE
-/*
-function game() {
-    var score = Math.random() * 10;
-    console.log(score >= 5);
-}
-game();
-
-
-(function () {
-    var score = Math.random() * 10;
-    console.log(score >= 5);
-})();
-
-//console.log(score);
-
-
-(function (goodLuck) {
-    var score = Math.random() * 10;
-    console.log(score >= 5 - goodLuck);
-})(5);
-*/
+// /*
+// function game() {
+//     var score = Math.random() * 10;
+//     console.log(score >= 5);
+// }
+// game();
+//
+//
+// (function () {
+//     var score = Math.random() * 10;
+//     console.log(score >= 5);
+// })();
+//
+// //console.log(score);
+//
+//
+// (function (goodLuck) {
+//     var score = Math.random() * 10;
+//     console.log(score >= 5 - goodLuck);
+// })(5);
+// */
 
 
 
@@ -329,7 +329,7 @@ c) correct answer (I would use a number for this)
 */
 
 
-/*
+
 (function() {
     function Question(question, answers, correct) {
         this.question = question;
@@ -376,7 +376,7 @@ c) correct answer (I would use a number for this)
 
     questions[n].checkAnswer(answer);
 })();
-*/
+
 
 
 
