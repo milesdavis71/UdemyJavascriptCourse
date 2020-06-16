@@ -155,6 +155,49 @@ Remember: BMI = mass / height^2 = mass / (height * height). (mass in kg and heig
 
 GOOD LUCK 😀
 
+
+*/
+function Man(
+  name,
+  mass,
+  height
+  ) {
+    this.name = name;
+    this.mass = mass;
+    this.height = height;
+  
+}
+
+Man.prototype.calcBMI = function () {
+  bmi = this.mass/(this.height*this.height);
+  return bmi;
+}
+
+var john = new Man(
+  'John',
+  100,
+  180
+)
+
+var mark = new Man(
+  'Mark',
+  100,
+  180
+)
+
+johnBMI = john.calcBMI();
+markBMI = mark.calcBMI();
+
+function biggerBMI() {
+  (johnBMI > markBMI) ? console.log("biggerBMI -> johnBMI", johnBMI):
+  (johnBMI < markBMI) ? console.log("biggerBMI -> markBMI", markBMI):
+  (johnBMI === markBMI) ? console.log("John BMI-je és Mark BMI-je egyenlő"):
+  console.log('Hiba');
+}
+
+biggerBMI();
+
+
 /*****************************
 * CODING CHALLENGE 5
 */
@@ -201,33 +244,26 @@ function Guest(
 
 }
 
-
-/* var arrayCalc = function(arr, fn){
-  var arrPop = [];
-  for (let i = 0; i < arr.length; i++) {
-    arrPop.push(fn(arr[i]));
-  }
-  return arrPop;
-} */
-
-
-
 Guest.prototype.calcTip = function () {
+  var arrPop = [];
   for (let i = 0; i < this.bills.length; i++) {
     tip = (this.bills[i] < this.limit1) ? this.bills[i] * this.percent1 / 100 :
       (this.bills[i] > this.limit1 && this.bills[i] < this.limit2) ? this.bills[i] * this.percent2 / 100 :
-        (this.bills[i] > this.limit3) ? this.bills[i] * this.percent3 / 100 :
+        (this.bills[i] > this.limit2) ? this.bills[i] * this.percent3 / 100 :
           console.log("Hiba");
+          arrPop.push(tip);
 
   }
-  console.log(tip);
+  var total = 0;
+  for (let i = 0; i < arrPop.length; i++) {
+    total += arrPop[i];
+  }
+  var avg = total/arrPop.length;
+  return avg;
 
 
 
 }
-
-
-
 
 
 var john = new Guest(
@@ -251,4 +287,13 @@ var mark = new Guest(
 
 
 
-mark.calcTip();
+let markTomb = mark.calcTip();
+let johnTomb = john.calcTip();
+
+function biggestAvgTip() {
+  (markTomb > johnTomb) ? console.log("biggestAvgTip -> markTomb", markTomb):
+  (markTomb < johnTomb) ? console.log("biggestAvgTip -> johnTomb", johnTomb):
+  console.log('Hiba');
+}
+
+biggestAvgTip();
