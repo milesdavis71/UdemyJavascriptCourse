@@ -188,14 +188,10 @@ var mark = new Man(
 johnBMI = john.calcBMI();
 markBMI = mark.calcBMI();
 
-function biggerBMI() {
-  (johnBMI > markBMI) ? console.log("biggerBMI -> johnBMI", johnBMI):
-  (johnBMI < markBMI) ? console.log("biggerBMI -> markBMI", markBMI):
-  (johnBMI === markBMI) ? console.log("John BMI-je és Mark BMI-je egyenlő"):
-  console.log('Hiba');
-}
+kiir = Math.max(johnBMI, markBMI);
+console.log(kiir);
 
-biggerBMI();
+// biggerBMI();
 
 
 /*****************************
@@ -226,7 +222,7 @@ Mark likes to tip 20% of the bill when the bill is less than $100, 10% when the 
 GOOD LUCK 😀
 */
 
-function Guest(
+/* function Guest(
   name,
   bills,
   limit1,
@@ -296,4 +292,4 @@ function biggestAvgTip() {
   console.log('Hiba');
 }
 
-biggestAvgTip();
+biggestAvgTip(); */
