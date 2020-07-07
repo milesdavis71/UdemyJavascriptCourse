@@ -39,9 +39,10 @@ var UIController = (function () {
 // kontroller függvény egy IIFE, de a benne lévő setupEventListeners és ctrlAddItem
 // függvényeket az inicializálás során kell meghívni.
 var controller = (function (budgetCtrl, UICtrl) {
-    // privát függvény
+    // privát függvény. Itt kerül  be a UIControllerből az inputBtn
     var setupEventListeners = function () {
         var DOM = UICtrl.getDOMStrings();
+        // Itt mennek be az értékek a UI-ból a kontrollerbe.
         document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
         // document.addEventListener('keypass', function (event) {
         //     if (event.keyCode === 13 || event.which === 13) {
