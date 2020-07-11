@@ -1,35 +1,40 @@
 var UIController = (function () {
-    var DOMStrings = {
-        inputType: ('add__tpye'),
-        inputDescription: ('add__description'),
-        inputValue: ('add__Value'),
-        inputBtn: ('add__btn'),
+    var DOMStrinsgs = {
+        inputType: '.add__type',
+        inputDescription: '.add__description',
+        inputValue: '.add__value',
+        inputBtn: '.add__btn'
     };
-
     return {
         getInput: function () {
             return {
-                type: document.querySelector(DOMStrings.type).value,
-                description: document.querySelector(DOMStrings.description).value,
-                value: document.querySelector(DOMStrings.value).value,
+                type: document.querySelector(DOMStrinsgs.inputType).value,
+                description: document.querySelector(DOMStrinsgs.inputDescription).value,
+                value: document.querySelector(DOMStrinsgs.inputValue).value,
             };
         },
         getDOMStrings: function () {
-            return DOMStrings;
-        }
+            return DOMStrinsgs;
 
-};
-}) ();
+        }
+    };
+})();
 
 var controller = (function (UICtrl) {
-    var setupEventListener = function () {
+    var setupEventListeners = function () {
         var DOM = UICtrl.getDOMStrings();
-        document.querySelector(getDOMStrings.inputBtn).addEventListener('click');
-    }
+        document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
+    };
 
     var ctrlAddItem = function () {
         var input = UICtrl.getInput();
-        console.log(input);
+        console.log(input)
     };
-})(UIController);
 
+    return {
+        init: function () {
+            setupEventListeners();
+        }
+    }
+})(UIController);
+controller.init();
