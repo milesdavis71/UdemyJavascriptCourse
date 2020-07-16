@@ -1,6 +1,55 @@
 
 var budgetController = (function () {
-    // Some code
+    var Expense = function (id, description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
+
+    var Income = function (id, description, value) {
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    };
+
+    var data = {
+        allItems: {
+            exp: [],
+            inc: []
+        },
+        totals: {
+            exp: 0,
+            inc: 0
+        }
+    };
+
+    return {
+        addItem: function(type, des, val) {
+            var newItem, ID;
+
+            if (data.allItems[type].length > 0) {
+                ID = data.allItems[type][data.allItems[type].length - 1].id + 1;
+            } else {
+                ID = 0;
+            }
+
+            
+            if (type === 'exp') {
+                newItem = new Expense(ID, des, val);
+            } else if (type === 'inc') {
+                newItem = new Income(ID, des, val);
+            }
+            data.allItems[type].push(newItem);
+            return newItem;
+            
+
+        },
+        testing: function () {
+            console.log(data);
+        }
+    };
+
+
 })();
 // Ez egy IFEE
 var UIController = (function () {
@@ -38,24 +87,27 @@ var UIController = (function () {
 // Ez maga a kontroller, itt lesz meghívva a többi modul.
 // kontroller függvény egy IIFE, de a benne lévő setupEventListeners és ctrlAddItem
 // függvényeket az inicializálás során kell meghívni.
+// a paraméterként megadott két függvény zárójelben, azoknak a tulajdonságai így használhatók a kontrollerben.
 var controller = (function (budgetCtrl, UICtrl) {
     // privát függvény. Itt kerül  be a UIControllerből az inputBtn
     var setupEventListeners = function () {
         var DOM = UICtrl.getDOMStrings();
         // Itt mennek be az értékek a UI-ból a kontrollerbe.
+        // A 'click' után annak a függvénynek a neve kerül, ami végrehajtódik a gomb megnyomásának hatására.
         document.querySelector(DOM.inputBtn).addEventListener('click', ctrlAddItem);
-        // document.addEventListener('keypass', function (event) {
-        //     if (event.keyCode === 13 || event.which === 13) {
-        //         ctrlAddItem();
-        //     }
-        // });0
+        document.addEventListener('keypass', function (event) {
+            if (event.keyCode === 13 || event.which === 13) {
+                ctrlAddItem();
+            }
+        });
     };
     // privát függvény
     var ctrlAddItem = function () {
-        // Ez publikus, ez érhető el kívülről.
+        // Ezek publikusak, elérhetők kívülről.
         // 1. beolvasni az UI-ról mező adatokat
-        var input = UICtrl.getInput();
-        console.log(input);
+        var input, NewItem;
+        input = UICtrl.getInput();
+        NewItem = budgetCtrl.addItem(input.type, input.description, input.value);
 
     };
 
@@ -65,7 +117,6 @@ var controller = (function (budgetCtrl, UICtrl) {
             setupEventListeners();
         }
     };
-
-})(budgetController, UIController);
+ })(budgetController, UIController);
 // Az init kívül került a kontrolleren, ezzel elérhetővé vált, hogy amíg nincs inicializálás, addig nincsnenek eseménykezelők, anélkül meg nincs bevitt adat se. 
 controller.init();
