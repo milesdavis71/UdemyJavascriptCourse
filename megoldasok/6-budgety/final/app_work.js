@@ -27,6 +27,12 @@ var budgetController = (function () {
         addItem: function(type, des, val) {
             var newItem, ID;
 
+            // Különbség az „else” és az „else if” között.
+            // Az else akkor lép életbe, ha az if NEM igaz.
+            // Az else if olyan, mint egy switch, azaz ha az egyik
+            // dolog éppen nem igaz, akkor továbbmegy,
+            // és megnézi, hogy hogy igaz-e a következő feltétel. 
+
             if (data.allItems[type].length > 0) {
                 ID = data.allItems[type][data.allItems[type].length - 1].id + 1;
             } else {
@@ -105,9 +111,9 @@ var controller = (function (budgetCtrl, UICtrl) {
     var ctrlAddItem = function () {
         // Ezek publikusak, elérhetők kívülről.
         // 1. beolvasni az UI-ról mező adatokat
-        var input, NewItem;
+        var input, newItem;
         input = UICtrl.getInput();
-        NewItem = budgetCtrl.addItem(input.type, input.description, input.value);
+        newItem = budgetCtrl.addItem(input.type, input.description, input.value);
 
     };
 
